@@ -1,9 +1,11 @@
 package java.com.skeyedu.service;
 
 import com.skeyedu.pojo.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface UserService {
     /**
      * 查询所有用户信息

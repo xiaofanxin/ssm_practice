@@ -1,0 +1,155 @@
+@charset "UTF-8";
+html, body, h1, h2, h3, p {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Microsoft YaHei';
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  content: ".";
+  /**/
+  /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+  display: block;
+  /**/
+  /*加入的这个元素转换为块级元素。*/
+  clear: both;
+  /**/
+  /*清除左右两边浮动。*/
+  visibility: hidden;
+  /**/
+  /*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+  line-height: 0;
+  /**/
+  /*行高为0；*/
+  height: 0;
+  /**/
+  /*高度为0；*/
+  font-size: 0;
+  /**/
+  /*字体大小为0；*/
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.wrap-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.login-header {
+  padding: 11px 0;
+}
+.login-header h1, .login-header img {
+  width: 184px;
+  height: 78px;
+}
+
+.login-main {
+  padding-right: 71px;
+  height: 601px;
+  background: url(login-bg.png) #263550 no-repeat top;
+}
+.login-main .left {
+  width: 540px;
+  margin-top: 250px;
+}
+.login-main .left h2 {
+  width: 540px;
+  font-weight: normal;
+  color: #fff;
+  font-size: 35px;
+  text-align: right;
+}
+.login-main .left h2 small {
+  display: block;
+  font-size: 16px;
+  margin-top: 35px;
+}
+.login-main .right {
+  margin-top: 131px;
+  width: 373px;
+  height: 340px;
+  background: #fff;
+}
+.login-main .right h3 {
+  font-size: 30px;
+  color: #FF240D;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.login-main .right .code img {
+  width: 97px;
+  height: 48px;
+  margin-top: 10px;
+}
+.login-main .right .item-wrap {
+  margin-left: 35px;
+  margin-top: 10px;
+  width: 304px;
+  height: 48px;
+  border: 1px solid #EEEEEE;
+  text-indent: 38px;
+}
+.login-main .right .item-wrap label {
+  margin-right: 12px;
+  color: #969696;
+}
+.login-main .right .item-wrap input {
+  width: 208px;
+  height: 46px;
+  border: 0;
+  outline: 0;
+}
+.login-main .right .item-wrap.account {
+  background: url(login-username.png) no-repeat 11px 15px;
+}
+.login-main .right .item-wrap.password {
+  background: url(login-password.png) no-repeat 12px 13px;
+}
+.login-main .right .item-wrap.code-input {
+  width: 193px;
+  margin-right: 14px;
+  background: url(login-code.png) no-repeat 13px 16px;
+}
+.login-main .right .item-wrap.code-input input {
+  width: 79px;
+}
+.login-main .right .tips {
+  font-size: 14px;
+  color: #FE9422;
+  margin-left: 35px;
+  margin-top: 8px;
+}
+.login-main .right .login-btn {
+  display: block;
+  width: 304px;
+  height: 42px;
+  background: #FF240D;
+  color: #fff;
+  font-size: 18px;
+  line-height: 42px;
+  text-align: center;
+  margin-left: 35px;
+  margin-top: 25px;
+}
+
+.login-footer {
+  margin: 65px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=login.css.map */

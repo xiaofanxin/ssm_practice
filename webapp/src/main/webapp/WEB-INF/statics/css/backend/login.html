@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>红辣椒商城后台管理系统---登录</title>
+        <link rel="stylesheet" href="login.css">
+        <script src="__JS__/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="login-header">
+            <div class="wrap-1200">
+                <h1><img src="__CSS__/backend/logo.png" alt="红辣椒商城"></h1>
+            </div>
+        </div>
+        <div class="login-main cleafix">
+            <div class="left fl">
+                <h2>
+                    红辣椒商城后台管理系统
+                    <small>Background Management System</small>
+                </h2>
+            </div>
+            <div class="right fr">
+                <form id="loginForm">
+                    <h3>登录</h3>
+                    <div class="item-wrap account">
+                        <label for="loginName">账号</label>
+                        <input type="text" id="loginName">
+                    </div>
+                    <div class="item-wrap password">
+                        <label for="password">密码</label>
+                        <input type="password" id="password">
+                    </div>
+<!--                    <div class="code clearfix">
+                        <div class="item-wrap code-input fl">
+                            <label for="checkcode">验证码</label>
+                            <input type="text" id="checkcode">
+                        </div>
+                        <img src="" alt="" />
+                    </div>-->
+                    <p class="tips" id="tips"></p>
+                    <a href="" class="login-btn">登录</a>
+                </form>
+            </div>
+        </div>
+        <div class="login-footer">
+            Copyright © 2004-2016 红辣椒版权所有
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $("#btnSubmit").click(function () {
+                    var loginName = $("#loginName").val();
+                    var password = $("#password").val();
+                    $.ajax({
+                        type: 'POST',
+                        url: '__ADMIN_DOMAIN__/login/loginIn',
+                        data: {"loginName": loginName, "password": password},
+                        success: function (data) {
+                            //获取数据
+                            if (data.status)
+                            {
+                                location.href = '__ADMIN_DOMAIN__/main/index';
+                            } else
+                            {
+                                $("#tips").html(data.msg);
+                            }
+                        }
+                    });
+                });
+
+            });
+        </script>
+    </body>
+</html>

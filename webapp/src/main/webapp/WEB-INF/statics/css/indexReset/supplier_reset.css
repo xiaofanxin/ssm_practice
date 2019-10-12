@@ -1,0 +1,85 @@
+.layout-split-west .panel-body{
+    background: #3C3C46;
+}
+.layout-split-west .panel-body{
+    border: none;
+}
+.tree-node{
+    /*	height: 35px;
+        line-height: 35px;*/
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #43434D;
+}
+.tree-icon{
+    display: none;
+}
+.tree-expanded{
+    height: 16px;
+    width: 16px;
+    background: url('xia.png');
+}
+.tree-collapsed{
+    height: 16px;
+    width: 16px;
+    background: url('right.png');
+}
+.tree-node-hover{
+    background: #24242C;
+    color: #fff;
+    text-decoration: none;
+}
+.tree-title{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.tree-title a{
+    color: #fff;
+    text-decoration: none;
+
+}
+.index-top{
+    background: #3C3C46;
+    color: #fff;
+    line-height: 66px;
+
+}
+.index-top .content{
+    font-size: 12px;
+}
+.index-top .content a{
+    color: #fff;
+    text-decoration: none;
+}
+.index-top span.left{
+    float: left;
+    display: block;
+    padding: 0 15px;
+    font-size: 18px;
+}
+.index-top span.right{
+    float: right;
+
+}
+.index-top span.right a{
+    padding: 5px 15px;
+    /*display: block;*/
+    /*float: left;*/
+}
+.index-top span a:hover{
+    background: #24242C;
+}
+.logo-box{
+    float: left;
+    display: block;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+
+}
+.logo-box img{
+    height: 46px;
+    float: left;
+}
