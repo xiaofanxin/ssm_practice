@@ -1,13 +1,20 @@
-package java.com.skeyedu.service.impl;
+package com.skeyedu.service.impl;
 
+import com.skeyedu.dao.user.UserDao;
 import com.skeyedu.pojo.User;
 import org.springframework.stereotype.Service;
 
-import java.com.skeyedu.service.UserService;
+import com.skeyedu.service.UserService;
+
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Resource
+    private UserDao userDao;
+
     @Override
     public List<User> getUserList() {
         return null;
@@ -25,6 +32,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserByName(String username) {
-        return null;
+        return userDao.getUserByName(username);
     }
 }

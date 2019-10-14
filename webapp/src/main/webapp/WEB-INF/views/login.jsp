@@ -16,7 +16,7 @@
     <form id="test_form" action="${pageContext.request.contextPath}/home/login" method="post">
         <div class="login-input-box">
             <span class="icon icon-user"></span>
-            <input type="text" name="name" placeholder="请输入用户名">
+            <input type="text" name="username" placeholder="请输入用户名">
         </div>
         <div class="login-input-box">
             <span class="icon icon-password"></span>

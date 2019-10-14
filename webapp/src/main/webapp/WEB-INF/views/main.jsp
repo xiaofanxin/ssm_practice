@@ -294,7 +294,7 @@
         <!-- <span class="left">红辣椒管理平台</span> -->
         <span class="right">
 
-                    <a href="javascript:void(0)">欢迎，${user.name}</a>
+                    <a href="javascript:void(0)">欢迎，${user.username}</a>
                     <a href="${pageContext.request.contextPath}/home/logout">退出登录</a>
                 </span>
     </div>

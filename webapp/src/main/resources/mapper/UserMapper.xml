@@ -6,7 +6,7 @@
 <mapper namespace="com.skeyedu.dao.user.UserDao">
     <resultMap id="UserList" type="User">
         <result property="id" column="id"></result>
-        <result property="name" column="name"></result>
+        <result property="username" column="username"></result>
         <result property="password" column="password"></result>
     </resultMap>
 
@@ -20,7 +20,7 @@
 
 
     <select id="getUserByName" resultType="User" parameterType="String">
-        SELECT * FROM USER WHERE 1=1 AND `name` = #{username}
+        SELECT * FROM USER WHERE 1=1 AND `username` = #{username}
     </select>
 
 

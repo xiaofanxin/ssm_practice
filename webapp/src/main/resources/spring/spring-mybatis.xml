@@ -16,7 +16,7 @@
     </bean>
 
     <!-- apache的dbcp数据库连接池 -->
-    <bean id="dateSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driver}"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
@@ -29,7 +29,7 @@
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dateSource"/>
+        <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
         <property name="typeAliasesPackage" value="com.skeyedu.pojo"/>
     </bean>
@@ -40,7 +40,8 @@
     </bean>
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dateSource"/>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 </beans>
