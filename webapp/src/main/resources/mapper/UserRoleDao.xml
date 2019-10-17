@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.skeyedu.dao.user.UserRoleDao">
+
+    <select id="getUserRoleByUID" resultType="UserRole">
+        SELECT * FROM user_role WHERE uid = #{uid}
+    </select>
+
+    <insert id="insertUserRole">
+        INSERT INTO user_role(uid, rid) VALUES(#{uid}, #{rid})
+    </insert>
+
+    <delete id="deleteByPrimaryKey">
+        DELETE FROM user_role WHERE id = #{id}
+    </delete>
+
+</mapper>

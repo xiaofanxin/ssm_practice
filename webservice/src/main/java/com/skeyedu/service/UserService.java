@@ -1,8 +1,11 @@
 package com.skeyedu.service;
 
+import com.skeyedu.pojo.MemberSearchParam;
 import com.skeyedu.pojo.User;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
+import java.util.Map;
 
 @Service
 public interface UserService {
@@ -33,4 +36,12 @@ public interface UserService {
      * @return
      */
     User getUserByName(String username);
+
+    /**
+     * 后台获取会员列表
+     * @param memberSearchParam
+     * @return
+     */
+    Map <String, Object> getMemberList(MemberSearchParam memberSearchParam);
+
 }

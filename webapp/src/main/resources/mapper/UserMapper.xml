@@ -11,13 +11,16 @@
     </resultMap>
 
     <select id="getUserList" resultType="User">
-
+        SELECT * FROM user
     </select>
 
     <select id="getUserById" parameterType="Integer" resultType="User">
-        
+        SELECT * FROM user WHERE id=#{id}
     </select>
 
+    <update id="updateUser">
+
+    </update>
 
     <select id="getUserByName" resultType="User" parameterType="String">
         SELECT * FROM USER WHERE 1=1 AND `username` = #{username}

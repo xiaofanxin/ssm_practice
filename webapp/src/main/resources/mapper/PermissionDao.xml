@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.skeyedu.dao.user.PermissionDao">
+    <select id="selectByPrimaryKey" resultType="Permission">
+        SELECT * FROM PERMISSION WHERE  ID = #{id}
+    </select>
+
+    <select id="selectPermissionLIst" resultType="Permission">
+        SELECT * FROM PERMISSION ORDER BY id DESC
+    </select>
+
+    <insert id="insertPermission">
+        INSERT INTO PERMISSION(name, desc_, url) VALUES(#{name}, #{desc_}, #{url})
+    </insert>
+
+    <update id="updatePermission">
+        UPDATE PERMISSION SET name=#{name}, desc_=#{desc_}, url=#{url} WHERE id=#{id}
+    </update>
+
+    <delete id="deletePermission">
+        DELETE FROM PERMISSION WHERE id=#{id}
+    </delete>
+
+</mapper>

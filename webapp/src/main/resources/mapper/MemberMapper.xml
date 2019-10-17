@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.skeyedu.dao.member.MemberDao">
+    <select id="queryList" resultType="Member" parameterType="MemberSearchParam">
+        SELECT * FROM member WHERE 1=1
+        <if test="realName != null and realName != ''" >
+            AND realName LIKE CONCAT ('%', ${realName}, '%')
+        </if>
+        <if test="userName != null and  userName != ''">
+            AND userName LIKE CONCAT('%', ${userName} , '%')
+        </if>
+        <if test="roleId != null and  roleId != ''">
+            AND roleId = #{roleId}
+        </if>
+        <if test="mobile != null and  mobile != ''">
+            AND mobile = #{mobile}
+        </if>
+        <if test="beginTime != null and beginTime != ''">
+            <if test="endTime != null and endTime != ''">
+                AND regTime BETWEEN #{beginTime} AND #{endTime}
+            </if>
+        </if>
+        <if test="isPage">
+            ORDER BY 'regTime' DESC LIMIT #{form},#{rows}
+        </if>
+    </select>
+
+
+    <select id="queryCount" resultType="Integer" parameterType="MemberSearchParam">
+        SELECT COUNT(*) 'rowCount' FROM MEMBER WHERE 1=1
+        <if test="realName != null and realName != ''" >
+            AND realName LIKE CONCAT ('%', ${realName}, '%')
+        </if>
+        <if test="userName != null and  userName != ''">
+            AND userName LIKE CONCAT('%', ${userName} , '%')
+        </if>
+        <if test="roleId != null and  roleId != ''">
+            AND roleId = #{roleId}
+        </if>
+        <if test="mobile != null and  mobile != ''">
+            AND mobile = #{mobile}
+        </if>
+        <if test="beginTime != null and beginTime != ''">
+            <if test="endTime != null and endTime != ''">
+                AND regTime BETWEEN #{beginTime} AND #{endTime}
+            </if>
+        </if>
+    </select>
+
+</mapper>

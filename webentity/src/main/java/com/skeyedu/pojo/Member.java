@@ -1,11 +1,10 @@
 package com.skeyedu.pojo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.io.Serializable;
 import java.util.Date;
 
-public class Menber implements Serializable {
+public class Member implements Serializable {
     private Integer userId;
     private String userName;
     private String realName;
